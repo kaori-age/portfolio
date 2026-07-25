@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGENO Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a href="#fv">
+          <img src="img/logo.svg" alt="AGENO">
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="#fv">TOP</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SP MENU -->
+  <div class="sp-menu" id="spMenu" aria-hidden="true">
+    <nav>
+      <ul class="sp-menu__list">
+        <li><a href="#fv" class="sp-menu__link">TOP</a></li>
+        <li><a href="#works" class="sp-menu__link">WORKS</a></li>
+        <li><a href="#skills" class="sp-menu__link">SKILLS</a></li>
+        <li><a href="#about" class="sp-menu__link">ABOUT</a></li>
+        <li><a href="#contact" class="sp-menu__link">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- FV -->
+    <section id="fv" class="fv">
+      <!-- ピンク装飾背景 -->
+      <div class="fv__deco" aria-hidden="true">
+        <img src="img/FVpc.png" alt="" class="fvpc">
+        <img src="img/FVsp.png" alt="" class="fvsp">
+      </div>
+      <div class="fv__content">
+        <div class="fv__catch js-fade">
+          <p>想いを丁寧にくみ取り、</p>
+          <p>信頼から生まれるデザインを。</p>
+        </div>
+        <div class="fv__profile js-fade">
+          <p>Kaori Ageno</p>
+          <p>Web Designer &amp; Planner</p>
+          <p>Based in Sendai</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKS -->
+    <section id="works" class="works">
+      <div class="works__inner">
+        <h2 class="section-title js-fade">WORKS</h2>
+        <div class="works__grid">
+          <article class="works__item js-fade">
+            <a href="#" class="works__item-link">
+              <div class="works__img-wrap">
+                <img src="img/works3.jpg" alt="PORTFOLIO">
+              </div>
+              <div class="works__info">
+                <div class="works__info-top">
+                  <span class="works__name">PORTFOLIO</span>
+                  <span class="works__tag">実案件サイト</span>
+                </div>
+                <p class="works__role">direction / design / coding / WordPress</p>
+              </div>
+            </a>
+          </article>
+          <article class="works__item js-fade">
+            <a href="#" class="works__item-link">
+              <div class="works__img-wrap">
+                <img src="img/works1.jpg" alt="Luminous Bloom">
+              </div>
+              <div class="works__info">
+                <div class="works__info-top">
+                  <span class="works__name">Luminous Bloom</span>
+                  <span class="works__tag">自主制作LP</span>
+                </div>
+                <p class="works__role">direction / design / coding</p>
+              </div>
+            </a>
+          </article>
+          <article class="works__item js-fade">
+            <a href="#" class="works__item-link">
+              <div class="works__img-wrap">
+                <img src="img/works2.jpg" alt="Fresh Vege">
+              </div>
+              <div class="works__info">
+                <div class="works__info-top">
+                  <span class="works__name">Fresh Vege</span>
+                  <span class="works__tag">自主制作LP</span>
+                </div>
+                <p class="works__role">direction / design / coding</p>
+              </div>
+            </a>
+          </article>
+          <article class="works__item js-fade">
+            <a href="#" class="works__item-link">
+              <div class="works__img-wrap">
+                <img src="img/works5.jpg" alt="3B body studio">
+              </div>
+              <div class="works__info">
+                <div class="works__info-top">
+                  <span class="works__name">3B body studio</span>
+                  <span class="works__tag">自主制作サイト</span>
+                </div>
+                <p class="works__role">direction / design / coding</p>
+              </div>
+            </a>
+          </article>
+          <article class="works__item js-fade">
+            <a href="#" class="works__item-link">
+              <div class="works__img-wrap">
+                <img src="img/works4.jpg" alt="Meta Leaf">
+              </div>
+              <div class="works__info">
+                <div class="works__info-top">
+                  <span class="works__name">Meta Leaf</span>
+                  <span class="works__tag">共同自主制作サイト</span>
+                </div>
+                <p class="works__role">direction / design / coding</p>
+              </div>
+            </a>
+          </article>
+        </div>
+        <div class="works__more js-fade">
+          <a href="works.html" class="arrow-link arrow-link--accent">ALL VIEW</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAVE: WORKS to SKILLS -->
+    <div class="wave-divider" aria-hidden="true">
+      <img src="img/background1.png" alt="">
+    </div>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+      <div class="skills__inner">
+        <h2 class="section-title js-fade">SKILLS</h2>
+        <div class="skills__list">
+          <div class="skills__item js-fade">
+            <h3 class="skills__category">Webデザイン</h3>
+            <div class="skills__content">
+              <div class="skills__img-wrap">
+                <img src="img/test.png" alt="Webデザイン">
+              </div>
+              <div class="skills__text">
+                <p class="skills__tool">Figma</p>
+                <p class="skills__desc">
+                  Webサイトの制作が可能です。ユーザーにとって使いやすく、迷わず必要な情報にたどり着けるよう、シンプルで分かりやすいデザインを心がけています。目的を達成するために必要な要素や、それに合った構成・デザインを一緒に考え、丁寧に形にしていきます。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="skills__item js-fade">
+            <h3 class="skills__category">コーディング</h3>
+            <div class="skills__content">
+              <div class="skills__img-wrap">
+                <img src="img/skills2.jpg" alt="コーディング">
+              </div>
+              <div class="skills__text">
+                <p class="skills__tool">HTML / CSS / Javascript (jQuery) / WordPress</p>
+                <p class="skills__desc">
+                  誰が見ても理解しやすいよう、規則性のある命名と、読みやすいコードを書くことを大切にしています。開発効率と保守性を高めるため、SCSSを使用した設計を行っています。レスポンシブ対応はもちろん、AIツールも活用し、さまざまな動きのある実装にも対応可能です。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAVE: SKILLS to ABOUT -->
+    <div class="wave-divider wave-divider--flip" aria-hidden="true">
+      <img src="img/background2.png" alt="">
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="about__inner">
+        <h2 class="section-title js-fade">ABOUT</h2>
+        <div class="about__content js-fade">
+          <div class="about__img-wrap">
+            <img src="img/about_top.jpg" alt="あげの かおり">
+          </div>
+          <div class="about__text">
+            <p class="about__name">あげの　かおり</p>
+            <p class="about__bio">
+              銀行員として働くなかで、人との信頼関係を築く大切さを学びました。<br>
+              結婚・出産を経て、自分らしく働ける道を探すなかでWebデザインと出会い、学びを深めています。<br>
+              一つひとつの制作を丁寧に、見る人にやさしく届くデザインを心がけています。<br>
+              小さなことにも誠実に向き合い、「安心して任せられる」と感じていただける存在を目指しています。
+            </p>
+            <a href="about.html" class="arrow-link arrow-link--accent about__more">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAVE: ABOUT to CONTACT -->
+    <div class="wave-divider wave-divider--contact" aria-hidden="true">
+      <img src="img/background3.png" alt="">
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <div class="contact__inner">
+        <h2 class="section-title js-fade">CONTACT</h2>
+        <form class="contact__form js-fade" id="contactForm" novalidate>
+          <div class="contact__fields">
+            <div class="contact__field">
+              <label for="contact-name">お名前</label>
+              <input type="text" id="contact-name" name="name" required>
+            </div>
+            <div class="contact__field">
+              <label for="contact-email">メールアドレス</label>
+              <input type="email" id="contact-email" name="email" required>
+            </div>
+            <div class="contact__field">
+              <label for="contact-message">お問い合わせ内容</label>
+              <textarea id="contact-message" name="message" rows="5" required></textarea>
+            </div>
+          </div>
+          <button type="submit" class="contact__submit">送信</button>
+        </form>
+        <div class="contact__crowdsourcing js-fade">
+          <p class="contact__crowdsourcing-label">クラウドソーシングサイトはこちら</p>
+          <div class="contact__links">
+            <a href="#" class="contact__link">
+              <img src="img/link.svg" alt="">
+              <span>ココナラ</span>
+            </a>
+            <a href="#" class="contact__link">
+              <img src="img/link.svg" alt="">
+              <span>クラウドワークス</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER WAVE -->
+      <div class="wave-divider wave-divider--footer" aria-hidden="true">
+        <img src="img/background_footer.png" alt="">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <a href="#fv">
+          <img src="img/logo.svg" alt="AGENO">
+        </a>
+      </div>
+      <nav class="footer__nav" aria-label="フッターナビゲーション">
+        <ul>
+          <li><a href="#fv">TOP</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer__copy">© 2026 Ageno Kaori. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

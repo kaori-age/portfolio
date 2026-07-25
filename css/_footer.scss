@@ -1,0 +1,99 @@
+// ============================================================
+// Footer
+// ============================================================
+
+.wave-divider--footer {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  margin-bottom: -1px;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.footer {
+  background-image: url("../img/background_footer_main.png");
+  background-size: contain;
+  background-repeat: repeat;
+  padding: 60px 80px 40px;
+  position: relative;
+  overflow: hidden;
+
+  @include tab {
+    padding: 48px 40px 32px;
+  }
+
+  @include sp {
+    padding: 48px 20px 32px;
+  }
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 160px;
+  margin-bottom: 48px;
+
+  @include tab {
+    gap: 80px;
+  }
+
+  @include sp {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+.footer__logo {
+  width: 160px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include sp {
+    width: 120px;
+  }
+}
+
+.footer__nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: $font-klee;
+    font-weight: 400;
+    font-size: 22px;
+    color: $color-text;
+
+    @include sp {
+      font-size: 18px;
+      gap: 16px;
+    }
+
+    a {
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.footer__copy {
+  text-align: center;
+  font-family: $font-klee;
+  font-weight: 400;
+  font-size: 12px;
+  color: $color-text-sub;
+}

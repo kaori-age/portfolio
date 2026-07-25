@@ -1,0 +1,27 @@
+// ============================================================
+// sub.scss — 下層ページ共通エントリーポイント
+// ホームページのSCSSパーシャル（base/nav/footer）を再利用
+// ============================================================
+
+// 共通基盤：変数・リセット・共通コンポーネント
+@import 'base';
+
+// 共通UI：ヘッダー・ハンバーガーメニュー
+@import 'nav';
+
+// 下層ページ共通レイアウト
+@import 'page-common';
+
+// ===== 各下層ページ固有スタイル =====
+
+// 実績一覧（works.html）
+@import 'works-list';
+
+// aboutページ（about.html）
+@import 'about-detail';
+
+// 実績詳細ページ（works-*.html）
+@import 'works-detail';
+
+// 共通UI：フッター
+@import 'footer';

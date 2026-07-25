@@ -1,0 +1,170 @@
+// ============================================================
+// Base: Variables, Reset, Common
+// ============================================================
+
+// --- Variables ---
+$color-bg: #fffbfc;
+$color-text: #333;
+$color-text-sub: #444;
+$color-accent: #ba535e;
+$color-pink: #df9fa1;
+$color-pink-light: #fae8e8;
+$color-title: #011126;
+$color-border: #bdbbbb;
+$color-border-input: #333;
+$color-white: #fff;
+
+$font-klee: 'Klee One', serif;
+$font-mplus: 'M PLUS Rounded 1c', sans-serif;
+
+$breakpoint-sp: 768px;
+$breakpoint-tab: 1024px;
+
+// --- Mixin ---
+@mixin sp {
+  @media (max-width: #{$breakpoint-sp}) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: #{$breakpoint-tab}) {
+    @content;
+  }
+}
+
+// --- Reset ---
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: $font-mplus;
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// --- Common: Section Title ---
+.section-title {
+  font-family: $font-klee;
+  font-weight: 600;
+  font-size: 36px;
+  color: $color-text;
+  margin-bottom: 52px;
+
+  @include sp {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+// --- Common: Arrow Link ---
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: $font-mplus;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  // 線
+  &::before {
+    content: '';
+    order: 2;
+    display: block;
+    margin-left: 10px;
+    width: 48px; // レイアウト幅は固定（transform で視覚幅だけ変える）
+    height: 1px;
+    background: currentColor;
+    flex-shrink: 0;
+    transform: scaleX(0.667); // 初期表示は 32px 相当
+    transform-origin: left center;
+    transition: transform 0.3s ease;
+  }
+
+  // 矢頭（>）
+  &::after {
+    content: '';
+    order: 3;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid currentColor;
+    border-right: 1px solid currentColor;
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    // 初期：線の視覚幅32px に合わせて配置（レイアウト幅48px との差 -16px を吸収）
+    margin-left: -20px;
+    transition: margin-left 0.3s ease;
+  }
+
+  &:hover::before {
+    transform: scaleX(1);
+  }
+
+  &:hover::after {
+    // ホバー：線の視覚幅48px に合わせて配置
+    margin-left: -4px;
+  }
+
+  &--accent {
+    color: $color-accent;
+  }
+}
+
+// --- Common: Wave Divider ---
+.wave-divider {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &--flip {
+    transform: scaleX(-1);
+  }
+}
+
+// --- Common: Fade-in Animation ---
+// Only apply hidden state after JS has loaded (body.js-ready)
+.js-ready .js-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js-fade.is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

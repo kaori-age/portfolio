@@ -1,0 +1,58 @@
+// ============================================================
+// _page-common.scss — 下層ページ共通レイアウト
+// ============================================================
+
+// --- メインコンテンツ領域 ---
+.sub-main {
+  position: relative;
+  min-height: calc(100vh - 300px);
+  padding-top: 80px; // ヘッダー分
+  z-index: 2;
+
+  @include sp {
+    padding-top: 70px;
+  }
+}
+
+// --- ページタイトルヒーロー ---
+.page-hero {
+  padding: 48px 0 24px;
+}
+
+.page-hero__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  @include tab {
+    padding: 0 40px;
+  }
+
+  @include sp {
+    padding: 0 20px;
+  }
+}
+
+.page-title {
+  font-family: $font-klee;
+  font-weight: 600;
+  font-size: 36px;
+  color: $color-text;
+
+  @include sp {
+    font-size: 28px;
+  }
+}
+
+// --- TOPへ戻るリンク ---
+.page-back {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 120px;
+
+  @include sp {
+    margin-top: 48px;
+    margin-bottom: 80px;
+  }
+}

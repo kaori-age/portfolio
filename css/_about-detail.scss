@@ -1,0 +1,207 @@
+// ============================================================
+// _about-detail.scss — aboutページ固有スタイル
+// ============================================================
+
+// --- 共通インナー幅 ---
+.about-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include sp {
+    padding: 0 20px;
+  }
+}
+
+// --- セクション見出し ---
+.about-subtitle {
+  font-family: $font-klee;
+  font-weight: 600;
+  font-size: 32px;
+  color: $color-text;
+  margin-bottom: 40px;
+
+  @include sp {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
+// --- about セクション共通 ---
+.about-section {
+  padding: 48px 0;
+}
+
+// --- プロフィール ---
+.about-profile {
+  padding: 24px 0 64px;
+}
+
+.about-profile__layout {
+  display: flex;
+  gap: 72px;
+  align-items: center;
+
+  @include tab {
+    gap: 40px;
+  }
+
+  @include sp {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+}
+
+.about-profile__img-wrap {
+  flex-shrink: 0;
+  width: 240px;
+  height: 320px;
+  border-radius: 50px;
+  overflow: hidden;
+
+  @include tab {
+    width: 200px;
+    height: 266px;
+    border-radius: 36px;
+  }
+
+  @include sp {
+    width: 160px;
+    height: 213px;
+    border-radius: 28px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-profile__text {
+  flex: 1;
+  font-family: $font-mplus;
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.9;
+
+  p+p {
+    margin-top: 1.2em;
+  }
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+// --- strengths ---
+.about-strengths {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include sp {
+    gap: 28px;
+  }
+}
+
+.about-strengths__item {
+  display: flex;
+  gap: 72px;
+  align-items: center;
+
+  @include tab {
+    gap: 40px;
+  }
+
+  @include sp {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
+
+.about-strengths__label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  width: 200px;
+  font-family: $font-mplus;
+  font-size: 16px;
+  color: $color-text;
+
+  @include sp {
+    width: auto;
+    font-size: 14px;
+  }
+}
+
+.about-strengths__icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.about-strengths__desc {
+  flex: 1;
+  font-family: $font-mplus;
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.9;
+
+  @include sp {
+    font-size: 14px;
+  }
+}
+
+// --- a little about me ---
+.about-private {
+  list-style: disc;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: $font-mplus;
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.9;
+
+  @include sp {
+    gap: 24px;
+    font-size: 14px;
+  }
+}
+
+// --- career ---
+.about-career {
+  background-image: url("../img/background.png");
+  background-size: contain;
+  background-repeat: repeat;
+  padding: 48px 0 0;
+
+  .about-subtitle {
+    color: $color-text;
+  }
+
+  .page-back {
+    margin-top: 64px;
+    margin-bottom: 80px;
+  }
+}
+
+.about-career__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: $font-mplus;
+  font-size: 16px;
+  color: $color-text;
+  line-height: 1.8;
+
+  @include sp {
+    font-size: 13px;
+    gap: 12px;
+  }
+}

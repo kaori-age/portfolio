@@ -1,0 +1,167 @@
+// ============================================================
+// Nav: Header & Navigation
+// ============================================================
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  padding: 20px 80px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+
+  @include tab {
+    padding: 16px 40px;
+  }
+
+  @include sp {
+    padding: 14px 20px;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  width: 80px;
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @include sp {
+    width: 60px;
+  }
+}
+
+.header__nav {
+  @include sp {
+    display: none;
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: $color-bg;
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-family: $font-klee;
+  font-size: 20px;
+  font-weight: 400;
+  color: $color-text;
+
+  @include tab {
+    gap: 24px;
+    font-size: 16px;
+  }
+
+  li {
+    a {
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $color-accent;
+      }
+
+      &.is-active {
+        color: $color-accent;
+      }
+    }
+  }
+}
+
+// --- Hamburger Button ---
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+
+  @include sp {
+    display: flex;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background: $color-text;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.is-open {
+    span:nth-child(1) {
+      transform: translateY(7.5px) rotate(-315deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(315deg);
+    }
+  }
+}
+
+// --- SP Menu Overlay ---
+.sp-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-image: url("../img/background_footer_main.png");
+  background-size: contain;
+  background-repeat: repeat;
+  z-index: 150;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  @include sp {
+    display: flex;
+  }
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.sp-menu__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.sp-menu__link {
+  font-family: $font-klee;
+  font-size: 28px;
+  font-weight: 600;
+  color: $color-text;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $color-accent;
+  }
+}

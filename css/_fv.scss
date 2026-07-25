@@ -1,0 +1,103 @@
+// ============================================================
+// FV: First View / Hero Section
+// ============================================================
+
+.fv {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $color-bg;
+}
+
+.fv__deco {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  pointer-events: none;
+
+  @include tab{
+    height: 80vh;
+  }
+
+  @include sp{
+    height: auto;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+    display: block;
+  }
+
+  .fvpc {
+    display: block;
+
+    @include sp{
+      display: none;
+    }
+  }
+
+  .fvsp{
+    display: none;
+
+    @include sp{
+      display: block;
+    }
+  }
+}
+
+
+// Left-side text content
+.fv__content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include tab {
+    top: auto;
+    bottom: 4%;
+    left: 4%;
+    transform: none;
+  }
+
+  @include sp {
+    top: auto;
+    bottom: 8%;
+    padding: 0;
+    gap: 12px;
+  }
+}
+
+.fv__catch {
+  font-family: $font-klee;
+  font-weight: 400;
+  font-size: 48px;
+  color: $color-text;
+  line-height: 1.5;
+
+  @include tab {
+    font-size: 36px;
+  }
+
+  @include sp {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+}
+
+.fv__profile {
+  font-family: $font-klee;
+  font-weight: 600;
+  font-size: 20px;
+  color: $color-text;
+  line-height: 2;
+
+  @include sp {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,123 @@
+// ============================================================
+// _works-list.scss — 実績一覧ページ固有スタイル
+// ============================================================
+
+.works-list {
+  padding-bottom: 0;
+}
+
+.works-list__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 80px;
+
+  @include tab {
+    padding: 0 40px;
+  }
+
+  @include sp {
+    padding: 0 20px;
+  }
+}
+
+// --- 2カラムグリッド ---
+.works-list__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 320px);
+  gap: 80px 160px;
+  justify-content: center;
+
+  @include tab {
+    grid-template-columns: repeat(2, 260px);
+    gap: 60px 60px;
+  }
+
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    justify-content: stretch;
+  }
+}
+
+// --- 実績カード ---
+.works-list__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.works-list__link {
+  display: block;
+  color: inherit;
+
+  &:hover .works-list__img-wrap img {
+    transform: scale(1.04);
+  }
+}
+
+// サムネイル画像
+.works-list__img-wrap {
+  width: 100%;
+  height: 240px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 8px;
+
+  @include tab {
+    height: 195px;
+    border-radius: 32px;
+  }
+
+  @include sp {
+    height: 200px;
+    border-radius: 32px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+}
+
+// テキスト情報
+.works-list__info {
+  font-family: $font-mplus;
+  color: $color-text;
+}
+
+.works-list__info-top {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.works-list__name {
+  font-weight: 500;
+  font-size: 22px;
+  white-space: nowrap;
+
+  @include tab {
+    font-size: 18px;
+  }
+
+  @include sp {
+    font-size: 20px;
+  }
+}
+
+.works-list__tag {
+  font-weight: 400;
+  font-size: 14px;
+  white-space: nowrap;
+  color: $color-text;
+}
+
+.works-list__role {
+  font-weight: 400;
+  font-size: 14px;
+  color: $color-text-sub;
+  line-height: 1.6;
+}
