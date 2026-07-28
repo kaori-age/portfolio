@@ -669,7 +669,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 160px;
+  gap: 120px;
 }
 @media (max-width: 1024px) {
   .works-detail-hero__inner {
@@ -691,6 +691,7 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+  width: 280px;
 }
 
 .works-detail-hero__title {
@@ -719,6 +720,7 @@ ol {
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 16px;
   color: #333;
+  margin-left: 24px;
   transition: opacity 0.2s ease;
 }
 .works-detail-hero__visit:hover {
