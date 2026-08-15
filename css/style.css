@@ -853,60 +853,6 @@ ol {
   opacity: 0.8;
 }
 
-.contact__crowdsourcing {
-  margin-top: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
-@media (max-width: 768px) {
-  .contact__crowdsourcing {
-    margin-top: 36px;
-  }
-}
-
-.contact__crowdsourcing-label {
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #333;
-}
-
-.contact__links {
-  display: flex;
-  gap: 80px;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .contact__links {
-    display: block;
-  }
-}
-
-.contact__link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 24px;
-  border: 1px solid #df9fa1;
-  border-radius: 8px;
-  background: #fff;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #333;
-  transition: background 0.2s ease, border-color 0.2s ease;
-  margin-bottom: 16px;
-}
-.contact__link img {
-  width: 20px;
-  height: 20px;
-}
-.contact__link:hover {
-  background: rgba(223, 159, 161, 0.15);
-}
-
 .wave-divider--footer {
   display: block;
   width: 100%;
